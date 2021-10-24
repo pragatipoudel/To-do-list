@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+}
+
+h1 {
+    margin: 10px;
+    font-weight: 800;
+}
+
+#new-item {
+    margin: 10px;
+    border: none;
+    border-bottom: 1px solid #454545;
+    outline: none;
+}
+
+ul{
+    list-style: none;
+}
+
+li {
+    margin: 4px;
+}
+
+li.checked {
+    text-decoration: line-through;
+}
+
+li input{
+    margin-right: 8px;
+}

@@ -41,3 +41,18 @@ li.checked {
 li input{
     margin-right: 8px;
 }
+
+#to-do-list li button {
+    display: none;
+    margin-left: 10px;
+    background-color:transparent;
+    color: red;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+
+}
+
+#to-do-list li:hover button {
+    display: inline-block;
+}

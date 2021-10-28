@@ -33,7 +33,7 @@ let ul = document.getElementById("to-do-list");
 
 function display() {
     ul.innerText = "";
-    items.forEach(item => {
+    items.forEach((item, index) => {
         let li = document.createElement('li');
         ul.appendChild(li);
 
@@ -50,6 +50,15 @@ function display() {
             li.classList.add('checked');
         }
         li.prepend(input);
+
+        let deleteButton = document.createElement('button');
+        deleteButton.innerText = 'X';
+        li.append(deleteButton);
+
+        deleteButton.onclick = () => {
+            items.splice(index,1);
+            display();
+        }
     })
     save();
 }
@@ -63,8 +72,10 @@ newInput.onkeyup = function(event) {
             checked: false
         })
         display();
+        newInput.value = "";
     }
 }
+
 
 load();
 display();
